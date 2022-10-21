@@ -1,0 +1,145 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+@media (prefers-color-scheme: dark) {
+    $grisOscuro: #2c2c3b;
+    body {
+        background-color: $grisOscuro;
+    }
+
+    .tagline,
+    .formulario label,
+    .login .acciones a,
+    .crear .acciones a,
+    .olvide .acciones a, 
+    .reestablecer .acciones a,
+    .confirmar .acciones a{
+        color: v.$blanco;
+    }
+    .descripcion-pagina,
+    .formulario .campo input,
+    .formulario-dash .campo label,
+    .nombre-pagina {
+        color: darken(v.$grisClaro, 10%);
+    }
+
+    .formulario .campo input {
+        background-color: lighten( $grisOscuro, 15%);
+        &::placeholder {
+            color: darken(v.$grisClaro, 30%);
+        }
+    }
+
+    .alerta.error {
+        background-color: v.$blanco;
+    }
+
+    .sidebar {
+        @include m.tablet {
+              background-color: darken($grisOscuro, 5%);
+        }
+        .sidebar-nav a {
+            &.activo,
+            &:hover {
+                background-color: darken(v.$darkturquesa, 5%);
+            }
+        }
+    }
+
+    .barra-mobile,
+    .barra {
+        background-color: darken($grisOscuro, 7%);
+    }
+    .barra {
+        p {
+            color: v.$mediumTurquoise;
+        span {
+            color: v.$blanco;
+            }
+         .cerrar-sesion {
+            @include m.boton(v.$darkturquesa, v.$blanco);
+            padding: 1rem;
+            font-size: 1.2rem;
+         }   
+         }
+    }
+
+    .filtros {
+        background-color: lighten($grisOscuro, 10%);
+        h2,
+        label {
+            color: v.$blanco;
+        }
+        input[type="radio"] {
+            accent-color: v.$mediumTurquoise;
+        }
+    }
+
+    .dashboard {
+        background-color: $grisOscuro;
+
+        .enlace {
+            color: v.$mediumTurquoise;
+
+            &:hover {
+                color: darken(v.$darkturquesa, 10%);
+            }
+        }
+        .formulario-dash input[type="text"] {
+                background-color: lighten(v.$grisOscuro, 5%);
+                border: none;
+                color: v.$blanco;
+                &::placeholder {
+                    color: darken(v.$grisClaro, 20%);
+                }
+        }
+    }
+
+    .contenido p ,.no-proyectos {
+            color: v.$blanco; 
+
+            a {
+                color: v.$darkturquesa;
+            }
+        }
+
+    .listado-proyectos .proyecto {
+        background-color: lighten($grisOscuro, 20%);
+        &:hover {
+            background-color: darken(v.$darkturquesa, 15%);
+        }
+    }
+    .listado-tareas {
+        color: v.$blanco;
+        .tarea {
+        background-color: lighten($grisOscuro, 10%);
+        border: none;
+        p {
+            color: v.$grisClaro;
+        }
+    }
+}
+
+    .formulario.nueva-tarea {
+        background-color: $grisOscuro;
+        legend {
+            color: v.$grisClaro;
+        }
+        input[type="text"] {
+            background-color: lighten(v.$grisOscuro, 5%);
+            border: none;
+            color: v.$blanco;
+            &::placeholder {
+                color: v.$grisClaro;
+            }
+        }
+    }
+
+    .footer {
+            p {
+                color:darken(v.$grisClaro, 15%);
+            }
+    }
+    
+    
+}

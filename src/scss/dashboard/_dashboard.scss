@@ -1,0 +1,62 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.dashboard {
+    background-color: v.$grisClaro;
+
+    @include m.tablet {
+        display: flex;
+        height: 100vh; // Viewport height
+    }
+
+    .principal {
+        flex: 1;
+        overflow: scroll;
+    }
+
+    .contenido {
+        padding: 2rem;
+        .nombre-pagina {
+            font-size: 2.8rem;
+            text-align: center;
+        }
+    }
+
+    .formulario-dash {
+            margin-top: 5rem;
+            .campo {
+                display: flex;
+                align-items: center;
+                margin-top: 2rem;
+        
+                label {
+                    flex: 0 0 10rem;
+                }
+                input {
+                    flex: 1;
+                    padding: 1rem;
+                    border: none;
+                    background-color: lighten(v.$blanco, 70%);
+                }
+            }
+        
+        input:not([type="submit"]) {
+            background-color: v.$blanco;
+        }
+        input[type="submit"] {
+            @include m.boton(v.$darkturquesa, v.$blanco);
+            padding: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+    }
+
+    .enlace {
+        color: v.$cyan;
+        font-size: 1.6rem;
+        &:hover {
+            color: darken(v.$mediumTurquoise, 15%);
+        }
+    }
+}

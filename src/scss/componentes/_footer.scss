@@ -1,0 +1,8 @@
+@use 'base/variables' as v;
+
+.footer {
+        p   {
+            color: darken(v.$grisOscuro, 20%);
+        }
+}
+
