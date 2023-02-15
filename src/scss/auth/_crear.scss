@@ -1,0 +1,19 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.crear {
+    margin-top: 5rem;
+    .uptask {
+        @include m.textoDegradado(v.$morado);
+    }
+
+    input[type="submit"] {
+        @include m.boton (v.$morado, v.$blanco); 
+    }
+
+    .acciones {
+        a {
+            color: v.$morado;
+        }
+    }    
+}

@@ -1,0 +1,15 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.confirmar {
+    margin-top: 5rem;
+    .uptask {
+        @include m.textoDegradado(v.$indigo);
+    }
+    .acciones {
+        justify-content: center;
+        a {
+            color: v.$indigo;
+        }
+    }    
+}

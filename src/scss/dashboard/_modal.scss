@@ -1,0 +1,56 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.modal {
+    position: absolute;
+    background-color: rgb( 0 0 0 / .8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .formulario {
+        max-width: 60rem;
+        background-color: v.$blanco;
+        padding: 2rem;
+        margin: 0 auto; // Centrar horizontalmente
+        transform: translateY(-30rem);
+        transition-property: all;
+        transition-duration: 500ms;
+        transition-timing-function: ease-in-out;
+        opacity: 0;
+        border-radius: 1rem;
+
+        legend {
+            font-size: 2rem;
+            text-align: center;
+            // font-weight: bold;
+            margin-bottom: 2rem;
+            display: block;
+        }
+        input[type="text"] {
+            border: 1px solid v.$gris;
+            border-radius: .5rem;
+        }
+        .opciones {
+            display: flex;
+            justify-content: space-between;
+        }
+        .submit-nueva-tarea {
+            @include m.boton(v.$mediumTurquoise, v.$blanco);
+        }
+        .cerrar-modal {
+            @include m.boton(v.$salmon, v.$blanco);
+        }        
+        &.animar {
+            position: relative; // Centrar verticalmente
+            top: 50%;   // CV
+            transform: translateY(-50%); // CV     
+            opacity: 1;  
+        }
+        &.cerrar {
+            transform: translateY(-200%); // CV     
+            opacity: 0;  
+        }
+    }
+}
