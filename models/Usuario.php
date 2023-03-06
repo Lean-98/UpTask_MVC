@@ -6,6 +6,17 @@ class Usuario extends ActiveRecord {
 
     protected static $tabla = 'usuarios';
     protected static $columnasDB = ['id', 'nombre', 'email', 'password', 'token', 'confirmado'];
+   
+    public $id;
+    public $nombre;
+    public $email;
+    public $password; 
+    public $password2;   
+    public $password_actual;   
+    public $password_nuevo;    
+    public $password_nuevo2;   
+    public $token;
+    public $confirmado;
     
     public function __construct($args = [])
     {

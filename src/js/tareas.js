@@ -228,7 +228,7 @@
 
 
         try {
-            const url = 'https://guarded-tundra-20607.herokuapp.com/api/tarea';
+            const url = 'http://localhost:3000/api/tarea';
             const respuesta = await fetch(url, {
                 method: 'POST',
                 body: datos
@@ -279,7 +279,7 @@
         datos.append('proyectoId', obtenerProyecto());
 
         try {
-            const url = 'https://guarded-tundra-20607.herokuapp.com/api/tarea/actualizar';
+            const url = 'http://localhost:3000/api/tarea/actualizar';
 
             const respuesta = await fetch(url, {
                 method: 'POST',
@@ -336,7 +336,7 @@
         datos.append('proyectoId', obtenerProyecto());
 
         try {
-            const url = 'https://guarded-tundra-20607.herokuapp.com/api/tarea/eliminar';
+            const url = 'http://localhost:3000/api/tarea/eliminar';
 
             const respuesta = await fetch(url, {
                 method: 'POST',
