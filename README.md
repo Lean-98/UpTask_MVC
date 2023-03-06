@@ -23,9 +23,16 @@ npm i -g gulp
 composer i
 ```
 
-Luego ``` gulp``` para ejecutar la aplicación y para el localhost: ``` php -S localhost:3000 ```
+Luego ``` gulp``` para ejecutar la aplicación y para el localhost: 
+``` 
+cd public
+php -S localhost:3000 
+```
 ## Acknowledgements
 
  - [Juan de la Torre](https://codigoconjuan.com/)
+
+
+
 
 
