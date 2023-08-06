@@ -1,8 +1,9 @@
 vendor/
 node_modules/
-gulpfile.js
-package.json
-package-look.json
+# gulpfile.js
+# package.json
+# package-look.json
 .DS_Store
 .env
+.env.local
 uptask_mvc.sql

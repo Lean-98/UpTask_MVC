@@ -20,11 +20,11 @@ class Email {
 
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = $_ENV['MAIL_HOST'];
+        $mail->Host = $_ENV['EMAIL_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Port =  $_ENV['MAIL_PORT'];
-        $mail->Username = $_ENV['MAIL_USER'];
-        $mail->Password = $_ENV['MAIL_PASSWORD'];
+        $mail->Port =  $_ENV['EMAIL_PORT'];
+        $mail->Username = $_ENV['EMAIL_USER'];
+        $mail->Password = $_ENV['EMAIL_PASSWORD'];
 
         $mail->setFrom('cuentas@uptask.com');
         $mail->addAddress('cuentas@uptask.com', 'uptask.com');
@@ -91,7 +91,7 @@ class Email {
         <h2>¡Gracias por registrarte!</h2>
         <p>Por favor confirma tu correo electrónico para que puedas comenzar a disfrutar de todos los beneficios de
             UpTask.</p>
-        <a href='http://localhost:3000/confirmar?token=" . $this->token . "'><button>Verificar</button></a>
+        <a href='" . $_ENV['APP_URL'] . "/confirmar?token=" . $this->token . "'><button>Verificar</button></a>
         <p>Si tú no te registraste en UpTask, por favor ignora este correo electrónico.</p>
         <div><p></p></div>
         <p><span>Este correo electrónico fue enviado desde una dirección solamente de notificaciones que no puede aceptar correo electrónico entrante. Por favor no respondas a este mensaje.</span></p>
@@ -107,11 +107,11 @@ class Email {
 
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = $_ENV['MAIL_HOST'];
+        $mail->Host = $_ENV['EMAIL_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Port = $_ENV['MAIL_PORT'];
-        $mail->Username = $_ENV['MAIL_USER'];
-        $mail->Password = $_ENV['MAIL_PASSWORD'];
+        $mail->Port = $_ENV['EMAIL_PORT'];
+        $mail->Username = $_ENV['EMAIL_USER'];
+        $mail->Password = $_ENV['EMAIL_PASSWORD'];
 
         $mail->setFrom('cuentas@uptask.com');
         $mail->addAddress('cuentas@uptask.com', 'uptask.com');
@@ -175,7 +175,7 @@ class Email {
     <body>
         <h1>UpTask</h1>
         <p>Hola " . $this->nombre . " Has solicitado reestablecer tu password, sigue el siguiente enlace para hacerlo:</p>
-        <a href='http://localhost:3000/reestablecer?token=" . $this->token . "'><button>Reestablecer Password</button></a>
+        <a href='" . $_ENV['APP_URL'] . "/reestablecer?token=" . $this->token . "'><button>Reestablecer Password</button></a>
         <p>Si tú no solicitaste el cambio en tu cuenta de UpTask, por favor ignora este correo electrónico.</p>
         <div><p></p></div>
         <p><span>Este correo electrónico fue enviado desde una dirección solamente de notificaciones que no puede aceptar correo electrónico entrante. Por favor no respondas a este mensaje.</span></p>
