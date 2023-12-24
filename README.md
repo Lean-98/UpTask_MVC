@@ -1,12 +1,11 @@
 
-#  UpTask - Administrador de Proyectos y Tareas
- HTML, CSS, SASS, POO PHP 8, MVC, JS Fetch, GULP.
+#  📝 UpTask - Administrador de Proyectos y Tareas
+Este proyecto, UpTask, es un administrador de proyectos y tareas que ofrece funcionalidades clave como inicio de sesión, creación de cuentas y recuperación de contraseñas. Construido con HTML, SASS, JavaScript Vanilla, y PHP 8 bajo el patrón de diseño MVC, UpTask proporciona una plataforma sólida y eficiente para la gestión de proyectos y tareas.
+UpTask es ideal para equipos y profesionales que buscan una solución completa para organizar y supervisar sus proyectos y tareas de manera efectiva. Con una base tecnológica sólida y un enfoque en la usabilidad, este proyecto ofrece una experiencia de usuario intuitiva y funcionalidades clave para la gestión de proyectos y tareas
 
 
-
-
-
-
+## Tech Stack
+Tech Stack:  HTML, SASS, JavaScript, GULP, POO PHP 8 MVC.
 
 
 ## Screenshots
@@ -32,6 +31,10 @@ php -S localhost:3000
 
  - [Juan de la Torre](https://codigoconjuan.com/)
 
+
+## Authors
+
+- [@LeandroPiazza](https://www.github.com/Lean-98)
 
 
 
